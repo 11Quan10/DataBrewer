@@ -1,42 +1,153 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+}
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f7f7fa;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    padding: 32px 24px;
+}
+
+.dashboard h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 24px;
+    color: #2d3748;
+}
+
+.summary-stats {
+    background: #e3f2fd;
+    border-radius: 8px;
+    padding: 16px 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(33, 150, 243, 0.07);
+}
+.summary-stats h2 {
+    margin-top: 0;
+    color: #1976d2;
+}
+.summary-stats ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 32px;
+    font-size: 1.1rem;
+    justify-content: center;
+    align-items: center;
+}
+.summary-stats li {
+    color: #333;
+}
+
+.controls {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    justify-content: center;
+}
+
+.search-bar {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #bdbdbd;
+    font-size: 1rem;
+    width: 220px;
+    transition: border-color 0.2s;
+}
+.search-bar:focus {
+    border-color: #1976d2;
+    outline: none;
+}
+
+.type-filter {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #bdbdbd;
+    font-size: 1rem;
+    background: #f5f5f5;
+    width: 160px;
+    transition: border-color 0.2s;
+}
+.type-filter:focus {
+    border-color: #1976d2;
+    outline: none;
+}
+
+.brewery-list {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fafafa;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.brewery-list th,
+.brewery-list td {
+    padding: 12px 10px;
+    text-align: left;
+}
+.brewery-list th {
+    background: #1976d2;
+    color: #fff;
+    font-weight: 600;
+    border-bottom: 2px solid #1565c0;
+}
+.brewery-list tr:nth-child(even) {
+    background: #e3f2fd;
+}
+.brewery-list tr:hover {
+    background: #bbdefb;
+    transition: background 0.2s;
+}
+.brewery-list td {
+    color: #333;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+    filter: drop-shadow(0 0 2em #646cffaa);
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+    filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
 @keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+    a:nth-of-type(2) .logo {
+        animation: logo-spin infinite 20s linear;
+    }
 }
 
 .card {
-  padding: 2em;
+    padding: 2em;
 }
 
 .read-the-docs {
-  color: #888;
+    color: #888;
 }

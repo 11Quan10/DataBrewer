@@ -32,13 +32,35 @@ function App() {
         fetchData();
     }, []);
 
-    const filteredBreweries = breweries
-        .filter((b) => b.name.toLowerCase().includes(searchTerm.toLowerCase()))
-        .filter((b) => (typeFilter ? b.brewery_type === typeFilter : true));
+    function getRandomBreweries(breweries) {
+        if (!Array.isArray(breweries)) return [];
+        const shuffled = [...breweries].sort(() => 0.5 - Math.random());
+        return shuffled.slice(0, 15);
+    }
+
+    const filteredBreweries =
+        searchTerm.length == 0 && typeFilter.length == 0
+            ? getRandomBreweries(breweries)
+            : breweries
+                  .filter(
+                      (b) =>
+                          b.name
+                              .toLowerCase()
+                              .includes(searchTerm.toLowerCase()) ||
+                          b.city
+                              .toLowerCase()
+                              .includes(searchTerm.toLowerCase()) ||
+                          b.state
+                              .toLowerCase()
+                              .includes(searchTerm.toLowerCase())
+                  )
+                  .filter((b) =>
+                      typeFilter ? b.brewery_type === typeFilter : true
+                  );
 
     return (
         <div className="dashboard">
-            <h1>DataBrewer Dashboard</h1>
+            <h1>🍺 DataBrewer 🍻</h1>
             <SummaryStats breweries={breweries} />
             <div className="controls">
                 <SearchBar
