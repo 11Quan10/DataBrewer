@@ -1,3 +1,101 @@
+/* Brewery Detail Page Styling */
+.brewery-detail {
+    max-width: 480px;
+    margin: 48px auto 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(25, 118, 210, 0.1);
+    padding: 32px 28px 28px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1.1rem;
+}
+.brewery-detail h2 {
+    color: #1976d2;
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-size: 2rem;
+    align-self: center;
+}
+.brewery-detail p {
+    margin: 4px 0;
+    color: #333;
+    width: 100%;
+    word-break: break-word;
+}
+.brewery-detail strong {
+    color: #1976d2;
+}
+.brewery-detail a {
+    color: #1565c0;
+    text-decoration: underline;
+    word-break: break-all;
+}
+.brewery-detail a:hover {
+    color: #0d47a1;
+}
+.main-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    margin-top: 32px;
+}
+.side-chart {
+    flex: 0 0 320px;
+    min-width: 260px;
+    max-width: 340px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.07);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    justify-content: center;
+}
+.side-chart h3 {
+    margin-top: 0;
+    color: #1976d2;
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+}
+.side-chart.left {
+    margin-right: 0;
+}
+.side-chart.right {
+    margin-left: 0;
+}
+.dashboard {
+    flex: 1 1 0;
+    max-width: 900px;
+    margin: 0;
+}
+.charts-container {
+    display: flex;
+    gap: 32px;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+.chart-box {
+    flex: 1 1 0;
+    background: #f5faff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.07);
+    padding: 18px 12px 8px 12px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.chart-box h3 {
+    margin-top: 0;
+    color: #1976d2;
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+}
 #root {
     max-width: 1280px;
     margin: 0 auto;
@@ -150,4 +248,18 @@ body {
 
 .read-the-docs {
     color: #888;
+}
+
+.home-link {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: #d1d1d1;
+    margin: 20px 30px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    display: flex;
+    gap: 18px;
+    align-items: center;
 }
